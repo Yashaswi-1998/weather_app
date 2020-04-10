@@ -51,7 +51,7 @@ const getTemp=(address,callback)=>
             }
             else{
                 data={
-                    temp:(response.body.main.temp-273.15),
+                    temp:((response.body.main.temp-273.15).toFixed(1)),
                     humidity:response.body.main.humidity
                 }
                 callback(undefined,data)
